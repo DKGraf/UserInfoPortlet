@@ -1,15 +1,16 @@
 <%@ include file="init.jsp" %>
+<html>
 
 <p style="font-size: larger">
     <b>
-        Full Name:
+        <liferay-ui:message key="portlet.fullname"/>
     </b>
     ${user.fullName}
 </p>
 
 <p style="font-size: larger">
     <b style="margin: auto; text-decoration: underline">
-        Organizations List:
+        <liferay-ui:message key="portlet.organizations.list"/>
     </b>
 </p>
 
@@ -17,10 +18,10 @@
     <c:when test="${!empty user.organizations}">
         <table border="1px" style="margin: 10px">
             <th width="125px" style="text-align: center">
-                Organization ID
+                <liferay-ui:message key="portlet.organization.id"/>
             </th>
             <th width="300px" style="text-align: center">
-                Organization Name
+                <liferay-ui:message key="portlet.organization.name"/>
             </th>
 
             <c:forEach items="${user.organizations}" var="organization">
@@ -43,15 +44,15 @@
 
 <p style="font-size: larger">
     <b style="margin: auto; text-decoration: underline">
-        Roles List:
+        <liferay-ui:message key="portlet.roles.list"/>
     </b>
 </p>
 <table border="1px" style="margin: 10px">
     <th width="125px" style="text-align: center">
-        Role ID
+        <liferay-ui:message key="portlet.role.id"/>
     </th>
     <th width="300px" style="text-align: center">
-        Role Name
+        <liferay-ui:message key="portlet.role.name"/>
     </th>
     <c:forEach items="${user.roles}" var="role">
         <tr>
@@ -64,3 +65,5 @@
         </tr>
     </c:forEach>
 </table>
+
+</html>
